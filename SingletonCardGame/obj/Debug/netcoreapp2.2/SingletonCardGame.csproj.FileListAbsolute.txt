@@ -1,0 +1,11 @@
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGame\bin\Debug\netcoreapp2.2\SingletonCardGame.deps.json
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGame\bin\Debug\netcoreapp2.2\SingletonCardGame.runtimeconfig.json
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGame\bin\Debug\netcoreapp2.2\SingletonCardGame.runtimeconfig.dev.json
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGame\bin\Debug\netcoreapp2.2\SingletonCardGame.dll
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGame\bin\Debug\netcoreapp2.2\SingletonCardGame.pdb
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGame\obj\Debug\netcoreapp2.2\SingletonCardGame.csprojAssemblyReference.cache
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGame\obj\Debug\netcoreapp2.2\SingletonCardGame.csproj.CoreCompileInputs.cache
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGame\obj\Debug\netcoreapp2.2\SingletonCardGame.AssemblyInfoInputs.cache
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGame\obj\Debug\netcoreapp2.2\SingletonCardGame.AssemblyInfo.cs
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGame\obj\Debug\netcoreapp2.2\SingletonCardGame.dll
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGame\obj\Debug\netcoreapp2.2\SingletonCardGame.pdb
