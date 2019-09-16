@@ -50,7 +50,7 @@ namespace SingletonCardGame.Model
         {
             List<string> cardsToGive = new List<string>();
 
-            for(int i = 0; i <= amount; i++)
+            for(int i = 0; i < amount; i++)
             {
                 cardsToGive.Add(firstInstance.cardList.First());
                 firstInstance.cardList.RemoveAt(0);
@@ -58,6 +58,16 @@ namespace SingletonCardGame.Model
 
             return cardsToGive;
         }       
+
+        public void PrintStock()
+        {
+            foreach (string card in getCardsInStaple())
+            {
+                Console.Write(card + ", ");
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+        }
     }
 
     //to make the shuffle functionality
