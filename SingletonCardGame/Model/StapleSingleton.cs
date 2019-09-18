@@ -61,10 +61,18 @@ namespace SingletonCardGame.Model
 
         public void PrintStock()
         {
+            Console.Write("Stock: ");
+            int amount = 0;
             foreach (string card in getCardsInStaple())
             {
-                Console.Write(card + ", ");
-            }
+                if (amount != 0)
+                {
+                    Console.Write(", ");
+                    amount++;
+                }
+                amount++;
+                Console.Write(card);
+            }            
             Console.WriteLine();
             Console.WriteLine();
         }

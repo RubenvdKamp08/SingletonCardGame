@@ -19,13 +19,24 @@ namespace SingletonCardGame.Model
         }
 
         //Print the user's cards
-        public void PrintHand()
+        public void PrintHand(int number)
         {
+            Console.Write("Player " + number + " has: ");
+            int amount = 0;
             foreach (string card in Staple)
             {
-                Console.Write(card + ", ");
+                if (amount != 0)
+                {
+                    Console.Write(", ");
+                    amount++;
+                }
+                amount++;
+                Console.Write(card);
             }
-            Console.WriteLine();
+            if (amount == 0)
+            {
+                Console.Write("no cards");
+            }
             Console.WriteLine();
         }
 
@@ -33,5 +44,15 @@ namespace SingletonCardGame.Model
         {
             return Staple;
         }
+
+        public bool GiveCard(string card)
+        {
+            if(Staple.Contains(card))
+            {
+                Staple.Remove(card);
+                return true;
+            }
+            return false;
+        }       
     }
 }
