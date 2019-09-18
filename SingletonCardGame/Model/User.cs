@@ -6,8 +6,16 @@ namespace SingletonCardGame.Model
 {
     class User
     {
+        public string Name { get; set; }
+        public int Id { get; set; }
         private StapleSingleton StapleSingleton = StapleSingleton.getInstance();
         private List<string> Staple = new List<string>();
+
+        public User(int id, string name)
+        {
+            this.Id = id;
+            this.Name = name;
+        }
 
         //get cards from stock
         public void GrabCards(int amount)
@@ -19,9 +27,9 @@ namespace SingletonCardGame.Model
         }
 
         //Print the user's cards
-        public void PrintHand(int number)
+        public void PrintHand()
         {
-            Console.Write("Player " + number + " has: ");
+            Console.Write(Name + " has: ");
             int amount = 0;
             foreach (string card in Staple)
             {
