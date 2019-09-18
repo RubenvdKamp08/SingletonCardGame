@@ -28,7 +28,7 @@ namespace SingletonCardGame
 
             Random r = new Random();
 
-            for (int i = 0; i <= amountOfRounds; i++)
+            for (int i = 0; i < amountOfRounds; i++)
             {
                 int playerNumber = r.Next(1, amountOfPlayers + 1);
                 Console.WriteLine("\n----------status---------- \n");
