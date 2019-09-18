@@ -8,7 +8,7 @@ namespace SingletonCardGame.Model
 {
     public class StackSingleton
     {
-        //prevend from errors with multithreading without locks
+        //prevent from errors with multithreading without locks
         private static StackSingleton firstInstance = new StackSingleton();       
 
         static string[] allCards = { "2h", "3h", "4h", "5h", "6h", "7h", "8h", "9h", "10h", "Jh", "Qh", "Kh",

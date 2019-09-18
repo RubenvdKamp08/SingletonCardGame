@@ -18,7 +18,7 @@ namespace SingletonCardGame.Model
             //check if there is already an instance
             if (firstInstance == null)
             {
-                //double checked locking to prevend multithreading errors
+                //double checked locking to prevent multithreading errors
                 lock (Instancelock)
                 {
                     if (firstInstance == null)
