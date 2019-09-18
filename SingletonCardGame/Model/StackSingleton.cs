@@ -8,8 +8,8 @@ namespace SingletonCardGame.Model
 {
     public class StackSingleton
     {
-        //prevent from errors with multithreading without locks
-        private static StackSingleton firstInstance = new StackSingleton();       
+        private static StackSingleton firstInstance = null;
+        private static readonly object Instancelock = new object();
 
         static string[] allCards = { "2h", "3h", "4h", "5h", "6h", "7h", "8h", "9h", "10h", "Jh", "Qh", "Kh",
                                    "2d", "3d", "4d", "5d", "6d", "7d", "8d", "9d", "10d", "Jd", "Qd", "Kd",
@@ -23,11 +23,17 @@ namespace SingletonCardGame.Model
         public static StackSingleton GetInstance()
         {
             //check if there is already an instance
-            if(firstInstance == null)
+            if (firstInstance == null)
             {
-                firstInstance = new StackSingleton();
-
-                firstInstance.cardList.Shuffle();
+                //double checked locking to prevent multithreading errors
+                lock (Instancelock)
+                {
+                    if (firstInstance == null)
+                    {
+                        firstInstance = new StackSingleton();
+                        firstInstance.cardList.Shuffle();
+                    }
+                }
             }
             return firstInstance;
         }
