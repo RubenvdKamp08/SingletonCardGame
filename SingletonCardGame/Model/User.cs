@@ -5,28 +5,26 @@ using System.Text;
 namespace SingletonCardGame.Model
 {
     class User
-    {
+    {   
         public string Name { get; set; }
         public int Id { get; set; }
-        private StapleSingleton StapleSingleton = StapleSingleton.getInstance();
+        private StackSingleton StapleSingleton = StackSingleton.GetInstance();
         private List<string> Staple = new List<string>();
 
         public User(int id, string name)
         {
-            this.Id = id;
-            this.Name = name;
+            Id = id;
+            Name = name;
         }
 
-        //get cards from stock
         public void GrabCards(int amount)
         {
             List<string> NewCards;
-            NewCards = StapleSingleton.getCards(amount);
+            NewCards = StapleSingleton.GetCards(amount);
 
             Staple.AddRange(NewCards);
         }
 
-        //Print the user's cards
         public void PrintHand()
         {
             Console.Write(Name + " has: ");
@@ -53,7 +51,7 @@ namespace SingletonCardGame.Model
             return Staple;
         }
 
-        public bool GiveCard(string card)
+        public bool PlayCard(string card)
         {
             if(Staple.Contains(card))
             {

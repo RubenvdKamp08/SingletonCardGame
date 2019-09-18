@@ -7,9 +7,9 @@ namespace SingletonCardGame
     class Program
     {
         static void Main(string[] args)
-        {
-            StapleSingleton newInstance = StapleSingleton.getInstance();
-            PlayingStapleSingleton playingNewInstance = PlayingStapleSingleton.getInstance();
+        {           
+            StackSingleton stackInstance = StackSingleton.GetInstance();
+            PlayingStackSingleton playingStackInstance = PlayingStackSingleton.GetInstance();
 
             List<User> users = new List<User>();
 
@@ -32,8 +32,8 @@ namespace SingletonCardGame
             {
                 int playerNumber = r.Next(1, amountOfPlayers + 1);
                 Console.WriteLine("\n----------status---------- \n");
-                playingNewInstance.printStaple();
-                newInstance.PrintStock();
+                playingStackInstance.PrintStaple();
+                stackInstance.PrintStack();
                 
                 Console.WriteLine("----------round "+ (i+1) +"----------\n");                
                 foreach(User user in users)
@@ -48,16 +48,16 @@ namespace SingletonCardGame
 
                         Console.Write(user.Name + " gives card: ");
                         string givenCard = Console.ReadLine();
-                        if (user.GiveCard(givenCard))
+                        if (user.PlayCard(givenCard))
                         {
-                            playingNewInstance.addingCardToStaple(givenCard);
+                            playingStackInstance.AddCardToStack(givenCard);
                         }
                     }
                 }                                
             }
             Console.WriteLine("\n----------end result----------\n");
-            playingNewInstance.printStaple();
-            newInstance.PrintStock();
+            playingStackInstance.PrintStaple();
+            stackInstance.PrintStack();
 
             foreach (User user in users)
             {
