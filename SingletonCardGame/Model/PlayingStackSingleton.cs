@@ -4,9 +4,10 @@ using System.Text;
 
 namespace SingletonCardGame.Model
 {
-    class PlayingStackSingleton
+    public class PlayingStackSingleton
     {        
         private static PlayingStackSingleton firstInstance = null;
+
         private static readonly object Instancelock = new object();
 
         List<string> Staple = new List<string>();
@@ -33,6 +34,11 @@ namespace SingletonCardGame.Model
         public void AddCardToStack(string card)
         {
             Staple.Add(card);
+        }
+
+        public List<string> GetStack()
+        {
+            return firstInstance.Staple;
         }
 
         public void PrintStaple()

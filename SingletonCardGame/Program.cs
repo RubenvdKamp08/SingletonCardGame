@@ -48,10 +48,7 @@ namespace SingletonCardGame
 
                         Console.Write(user.Name + " gives card: ");
                         string givenCard = Console.ReadLine();
-                        if (user.PlayCard(givenCard))
-                        {
-                            playingStackInstance.AddCardToStack(givenCard);
-                        }
+                        user.PlayCard(givenCard);                        
                     }
                 }                                
             }

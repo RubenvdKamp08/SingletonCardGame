@@ -9,6 +9,7 @@ namespace SingletonCardGame.Model
     public class StackSingleton
     {
         private static StackSingleton firstInstance = null;
+
         private static readonly object Instancelock = new object();
 
         static string[] allCards = { "2h", "3h", "4h", "5h", "6h", "7h", "8h", "9h", "10h", "Jh", "Qh", "Kh",

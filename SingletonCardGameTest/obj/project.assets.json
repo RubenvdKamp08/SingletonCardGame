@@ -1645,6 +1645,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "SingletonCardGame/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/SingletonCardGame.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SingletonCardGame.dll": {}
+        }
       }
     }
   },
@@ -1800,7 +1810,7 @@
       ]
     },
     "Microsoft.NETCore.App/2.2.0": {
-      "sha512": "7z5l8Jp324S8bU8+yyWeYHXUFYvKyiI5lqS1dXgTzOx1H69Qbf6df12kCKlNX45LpMfCMd4U3M6p7Rl5Zk7SLA==",
+      "sha512": "QU8taCyeyePwatrj+h+750lMnsPCq3YPaGmsdtSHXPCjDyjto2KT7QDNVet0oRliX4PjaINpyg0Yzd9DnQ/Wkw==",
       "type": "package",
       "path": "microsoft.netcore.app/2.2.0",
       "files": [
@@ -2065,7 +2075,7 @@
       ]
     },
     "Microsoft.NETCore.DotNetAppHost/2.2.0": {
-      "sha512": "DrhaKInRKKvN6Ns2VNIlC7ZffLOp9THf8cO6X4fytPRJovJUbF49/zzx4WfgX9E44FMsw9hT8hrKiIqDSHvGvA==",
+      "sha512": "qIrVLupwT2NYTrf7KM7Nh+mJr36V5MITVRjyGOByVVCwGmQgQmI/6bjZYQv+QdExi4Cm87eCKJX9FdT6nc00Xg==",
       "type": "package",
       "path": "microsoft.netcore.dotnetapphost/2.2.0",
       "files": [
@@ -2079,7 +2089,7 @@
       ]
     },
     "Microsoft.NETCore.DotNetHostPolicy/2.2.0": {
-      "sha512": "FJie7IoPZFaPgNDxhZGmDBQP/Bs5vPdfca/G2Wf9gd6LIvMYkZcibtmJwB4tcf4KXkaOYfIOo4Cl9sEPMsSzkw==",
+      "sha512": "5Xvh/3bDr6YAl6TKfeONvRDZ9QOmvVmzFzA0M6g8uubWdf5/o6qdVOqByFBT/fhjVb6okP0E5+v1oxh1Pk+c+w==",
       "type": "package",
       "path": "microsoft.netcore.dotnethostpolicy/2.2.0",
       "files": [
@@ -2093,7 +2103,7 @@
       ]
     },
     "Microsoft.NETCore.DotNetHostResolver/2.2.0": {
-      "sha512": "spDm3AJYmebthDNhzY17YLPtvbc+Y1lCLVeiIH1uLJ/hZaM+40pBiPefFR8J1u66Ndkqi8ipR2tEbqPnYnjRhw==",
+      "sha512": "Q3j3KC2ugqIVasf7pO4NRDEn7GysZX3ZH6fAHfbjrP8cYXY9cmHeFcbaniw36q8kFhsPt2EnRHzSsLBpbG6l2Q==",
       "type": "package",
       "path": "microsoft.netcore.dotnethostresolver/2.2.0",
       "files": [
@@ -2107,7 +2117,7 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.2.0": {
-      "sha512": "T/J+XZo+YheFTJh8/4uoeJDdz5qOmOMkjg6/VL8mHJ9AnP8+fmV/kcbxeXsob0irRNiChf+V0ig1MCRLp/+Kog==",
+      "sha512": "39+GVHdbm+cmoOjdvm+fhiMbddnuVyUlBdYS8Yhn5xsNaBoTXpgBsxQQlI2Sv9EjIP0F+itG6yrDaOM2OEGupQ==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.2.0",
       "files": [
@@ -4894,11 +4904,12 @@
       ]
     },
     "System.Runtime.Serialization.Primitives/4.1.1": {
-      "sha512": "HZ6Du5QrTG8MNJbf4e4qMO3JRAkIboGT5Fk804uZtg3Gq516S7hAqTm2UZKUHa7/6HUGdVy3AqMQKbns06G/cg==",
+      "sha512": "+mqQrrJsDx5yxIq+wLYKHr6pVc08ETOzJFwE3QvWmEwM4CU5RNKGdqu47bk+HGScaT58ZCVFmjwpp0OBUxy1QA==",
       "type": "package",
       "path": "system.runtime.serialization.primitives/4.1.1",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5741,6 +5752,11 @@
         "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "SingletonCardGame/1.0.0": {
+      "type": "project",
+      "path": "../SingletonCardGame/SingletonCardGame.csproj",
+      "msbuildProject": "../SingletonCardGame/SingletonCardGame.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5748,27 +5764,28 @@
       "Microsoft.NET.Test.Sdk >= 15.9.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "NUnit3TestAdapter >= 3.11.0",
+      "SingletonCardGame >= 1.0.0",
       "nunit >= 3.11.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\youri\\.nuget\\packages\\": {},
+    "C:\\Users\\RubenVdKamp\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\youri\\OneDrive\\Bureaublad\\Singleton\\SingletonCardGame\\SingletonCardGameTest\\SingletonCardGameTest.csproj",
+      "projectUniqueName": "C:\\Users\\RubenVdKamp\\source\\repos\\SingletonCardGame\\SingletonCardGameTest\\SingletonCardGameTest.csproj",
       "projectName": "SingletonCardGameTest",
-      "projectPath": "C:\\Users\\youri\\OneDrive\\Bureaublad\\Singleton\\SingletonCardGame\\SingletonCardGameTest\\SingletonCardGameTest.csproj",
-      "packagesPath": "C:\\Users\\youri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\youri\\OneDrive\\Bureaublad\\Singleton\\SingletonCardGame\\SingletonCardGameTest\\obj\\",
+      "projectPath": "C:\\Users\\RubenVdKamp\\source\\repos\\SingletonCardGame\\SingletonCardGameTest\\SingletonCardGameTest.csproj",
+      "packagesPath": "C:\\Users\\RubenVdKamp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\RubenVdKamp\\source\\repos\\SingletonCardGame\\SingletonCardGameTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\youri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\RubenVdKamp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5780,7 +5797,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\RubenVdKamp\\source\\repos\\SingletonCardGame\\SingletonCardGame\\SingletonCardGame.csproj": {
+              "projectPath": "C:\\Users\\RubenVdKamp\\source\\repos\\SingletonCardGame\\SingletonCardGame\\SingletonCardGame.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

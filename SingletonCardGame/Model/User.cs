@@ -4,11 +4,12 @@ using System.Text;
 
 namespace SingletonCardGame.Model
 {
-    class User
+    public class User
     {   
         public string Name { get; set; }
         public int Id { get; set; }
         private StackSingleton StapleSingleton = StackSingleton.GetInstance();
+        private PlayingStackSingleton playingStackSingleton = PlayingStackSingleton.GetInstance();
         private List<string> Staple = new List<string>();
 
         public User(int id, string name)
@@ -51,14 +52,13 @@ namespace SingletonCardGame.Model
             return Staple;
         }
 
-        public bool PlayCard(string card)
+        public void PlayCard(string card)
         {
             if(Staple.Contains(card))
             {
                 Staple.Remove(card);
-                return true;
+                playingStackSingleton.AddCardToStack(card);
             }
-            return false;
         }       
     }
 }
