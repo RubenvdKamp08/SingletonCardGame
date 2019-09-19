@@ -6,47 +6,45 @@ using System.Text;
 
 namespace SingletonCardGame.Model
 {
-    public class StapleSingleton
+    public class StackSingleton
     {
-        private static StapleSingleton firstInstance = null;
+        private static StackSingleton firstInstance = null;
 
-        static string[] cards = { "2♥", "3♥", "4♥", "5♥", "6♥", "7♥", "8♥", "9♥", "10♥", "B♥", "Q♥", "H♥",
-                                   "2♦", "3♦", "4♦", "5♦", "6♦", "7♦", "8♦", "9♦", "10♦", "B♦", "Q♦", "H♦",
-                                   "2♣", "3♣", "4♣", "5♣", "6♣", "7♣", "8♣", "9♣", "10♣", "B♣", "Q♣", "H♣",
-                                   "2♠", "3♠", "4♠", "5♠", "6♠", "7♠", "8♠", "9♠", "10♠", "B♠", "Q♠", "H♠",};
+        private static readonly object Instancelock = new object();
 
-        static string[] cards1 = { "2h", "3h", "4h", "5h", "6h", "7h", "8h", "9h", "10h", "Jh", "Qh", "Kh",
+        static string[] allCards = { "2h", "3h", "4h", "5h", "6h", "7h", "8h", "9h", "10h", "Jh", "Qh", "Kh",
                                    "2d", "3d", "4d", "5d", "6d", "7d", "8d", "9d", "10d", "Jd", "Qd", "Kd",
                                    "2c", "3c", "4c", "5c", "6c", "7c", "8c", "9c", "10c", "Jc", "Qc", "Kc",
                                    "2s", "3s", "4s", "5s", "6s", "7s", "8s", "9s", "10s", "Js", "Qs", "Ks",};
 
-        List<string> cardList = cards1.OfType<string>().ToList();
+        List<string> cardList = allCards.OfType<string>().ToList();
 
-        private StapleSingleton() { }
+        private StackSingleton() { }
 
-        public static StapleSingleton getInstance()
+        public static StackSingleton GetInstance()
         {
-            if(firstInstance == null)
+            //check if there is already an instance
+            if (firstInstance == null)
             {
-                firstInstance = new StapleSingleton();
-
-                firstInstance.cardList.Shuffle();
+                //double checked locking to prevent multithreading errors
+                lock (Instancelock)
+                {
+                    if (firstInstance == null)
+                    {
+                        firstInstance = new StackSingleton();
+                        firstInstance.cardList.Shuffle();
+                    }
+                }
             }
             return firstInstance;
         }
 
-
-        //get cards in the staple
-        public List<string> getCardsInStaple()
+        public List<string> GetStack()
         {
             return firstInstance.cardList;
         }
 
-
-        //get cards from the staple
-
-            //TODO : make sure that the cards will add to the user
-        public List<string> getCards(int amount)
+        public List<string> GetCards(int amount)
         {
             List<string> cardsToGive = new List<string>();
 
@@ -59,11 +57,23 @@ namespace SingletonCardGame.Model
             return cardsToGive;
         }       
 
-        public void PrintStock()
+        public void PrintStack()
         {
-            foreach (string card in getCardsInStaple())
+            Console.Write("Stack: ");
+            int amount = 0;
+            foreach (string card in GetStack())
             {
-                Console.Write(card + ", ");
+                if (amount != 0)
+                {
+                    Console.Write(", ");
+                    amount++;
+                }
+                amount++;
+                Console.Write(card);
+            }
+            if (amount == 0)
+            {
+                Console.Write("No cards");
             }
             Console.WriteLine();
             Console.WriteLine();

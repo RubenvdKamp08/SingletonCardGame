@@ -4,28 +4,46 @@ using System.Text;
 
 namespace SingletonCardGame.Model
 {
-    class User
-    {
-        private StapleSingleton StapleSingleton = StapleSingleton.getInstance();
+    public class User
+    {   
+        public string Name { get; set; }
+        public int Id { get; set; }
+        private StackSingleton StapleSingleton = StackSingleton.GetInstance();
+        private PlayingStackSingleton playingStackSingleton = PlayingStackSingleton.GetInstance();
         private List<string> Staple = new List<string>();
 
-        //get cards from stock
+        public User(int id, string name)
+        {
+            Id = id;
+            Name = name;
+        }
+
         public void GrabCards(int amount)
         {
             List<string> NewCards;
-            NewCards = StapleSingleton.getCards(amount);
+            NewCards = StapleSingleton.GetCards(amount);
 
             Staple.AddRange(NewCards);
         }
 
-        //Print the user's cards
         public void PrintHand()
         {
+            Console.Write(Name + " has: ");
+            int amount = 0;
             foreach (string card in Staple)
             {
-                Console.Write(card + ", ");
+                if (amount != 0)
+                {
+                    Console.Write(", ");
+                    amount++;
+                }
+                amount++;
+                Console.Write(card);
             }
-            Console.WriteLine();
+            if (amount == 0)
+            {
+                Console.Write("no cards");
+            }
             Console.WriteLine();
         }
 
@@ -33,5 +51,14 @@ namespace SingletonCardGame.Model
         {
             return Staple;
         }
+
+        public void PlayCard(string card)
+        {
+            if(Staple.Contains(card))
+            {
+                Staple.Remove(card);
+                playingStackSingleton.AddCardToStack(card);
+            }
+        }       
     }
 }

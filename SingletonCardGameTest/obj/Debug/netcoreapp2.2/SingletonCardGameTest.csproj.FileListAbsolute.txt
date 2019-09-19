@@ -1,0 +1,17 @@
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGameTest\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.dll
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGameTest\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.pdb
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGameTest\bin\Debug\netcoreapp2.2\nunit.engine.netstandard.dll
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGameTest\bin\Debug\netcoreapp2.2\SingletonCardGameTest.deps.json
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGameTest\bin\Debug\netcoreapp2.2\SingletonCardGameTest.runtimeconfig.json
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGameTest\bin\Debug\netcoreapp2.2\SingletonCardGameTest.runtimeconfig.dev.json
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGameTest\bin\Debug\netcoreapp2.2\SingletonCardGameTest.dll
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGameTest\bin\Debug\netcoreapp2.2\SingletonCardGameTest.pdb
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGameTest\bin\Debug\netcoreapp2.2\SingletonCardGame.dll
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGameTest\bin\Debug\netcoreapp2.2\SingletonCardGame.pdb
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGameTest\obj\Debug\netcoreapp2.2\SingletonCardGameTest.csprojAssemblyReference.cache
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGameTest\obj\Debug\netcoreapp2.2\SingletonCardGameTest.csproj.CoreCompileInputs.cache
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGameTest\obj\Debug\netcoreapp2.2\SingletonCardGameTest.AssemblyInfoInputs.cache
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGameTest\obj\Debug\netcoreapp2.2\SingletonCardGameTest.AssemblyInfo.cs
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGameTest\obj\Debug\netcoreapp2.2\SingletonCardGameTest.csproj.CopyComplete
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGameTest\obj\Debug\netcoreapp2.2\SingletonCardGameTest.dll
+C:\Users\RubenVdKamp\source\repos\SingletonCardGame\SingletonCardGameTest\obj\Debug\netcoreapp2.2\SingletonCardGameTest.pdb
